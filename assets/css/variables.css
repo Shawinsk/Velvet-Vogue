@@ -1,0 +1,248 @@
+/**
+ * VelvetVogue - CSS Custom Properties (Variables)
+ * Design System Tokens
+ * Premium Dark Luxury Theme with Rose Gold Accents
+ */
+
+:root {
+    /* =====================================================
+       BACKGROUND COLORS
+       ===================================================== */
+    --primary-bg: #0A0A0A;           /* Deep Black */
+    --secondary-bg: #1A1A1A;         /* Rich Charcoal */
+    --tertiary-bg: #2A2A2A;          /* Elevated Surface */
+    --card-bg: #151515;              /* Card Background */
+    --overlay-bg: rgba(0, 0, 0, 0.8);
+    --modal-bg: rgba(10, 10, 10, 0.95);
+    
+    /* =====================================================
+       ACCENT COLORS - ROSE GOLD
+       ===================================================== */
+    --accent-rose-gold: #B76E79;      /* Rose Gold Primary */
+    --accent-rose-gold-light: #D4939F; /* Light Rose Gold */
+    --accent-rose-gold-dark: #8B4A56;  /* Dark Rose Gold */
+    --accent-rose-gold-rgb: 183, 110, 121;
+    --accent-copper: #C18E6A;          /* Copper Accent */
+    
+    /* Alternative Gold (if needed) */
+    --accent-gold: #D4AF37;
+    --accent-gold-light: #E5C158;
+    --accent-gold-dark: #B8962E;
+    
+    /* =====================================================
+       TEXT COLORS
+       ===================================================== */
+    --text-primary: #FFFFFF;          /* Pure White */
+    --text-secondary: #C4C4C4;        /* Soft Gray */
+    --text-muted: #808080;            /* Muted Gray */
+    --text-disabled: #4A4A4A;         /* Disabled */
+    --text-inverse: #0A0A0A;          /* For light backgrounds */
+    
+    /* =====================================================
+       BORDERS & LINES
+       ===================================================== */
+    --border-color: #2A2A2A;
+    --border-light: #3A3A3A;
+    --border-accent: var(--accent-rose-gold);
+    --divider: rgba(255, 255, 255, 0.1);
+    
+    /* =====================================================
+       STATUS COLORS
+       ===================================================== */
+    --success: #4CAF50;
+    --success-light: #81C784;
+    --error: #F44336;
+    --error-light: #E57373;
+    --warning: #FFC107;
+    --warning-light: #FFD54F;
+    --info: #2196F3;
+    --info-light: #64B5F6;
+    
+    /* =====================================================
+       TYPOGRAPHY - FONT FAMILIES
+       ===================================================== */
+    /* Logo Font - Elegant Script */
+    --font-logo: 'Allura', cursive;
+    
+    /* Headings - Serif */
+    --font-heading: 'Playfair Display', serif;
+    
+    /* Body - Sans Serif */
+    --font-body: 'Montserrat', sans-serif;
+    
+    /* Tagline - Elegant Serif */
+    --font-tagline: 'Cormorant Garamond', serif;
+    
+    /* Monospace */
+    --font-mono: 'Fira Code', monospace;
+    
+    /* =====================================================
+       TYPOGRAPHY - FONT SIZES
+       ===================================================== */
+    --text-xs: 0.75rem;      /* 12px */
+    --text-sm: 0.875rem;     /* 14px */
+    --text-base: 1rem;       /* 16px */
+    --text-md: 1.125rem;     /* 18px */
+    --text-lg: 1.25rem;      /* 20px */
+    --text-xl: 1.5rem;       /* 24px */
+    --text-2xl: 2rem;        /* 32px */
+    --text-3xl: 2.5rem;      /* 40px */
+    --text-4xl: 3rem;        /* 48px */
+    --text-5xl: 4rem;        /* 64px */
+    --text-6xl: 5rem;        /* 80px */
+    
+    /* Logo Sizes */
+    --logo-size-sm: 2rem;
+    --logo-size-md: 2.5rem;
+    --logo-size-lg: 3.5rem;
+    --logo-size-xl: 5rem;
+    --logo-size-hero: 8rem;
+    
+    /* =====================================================
+       TYPOGRAPHY - FONT WEIGHTS
+       ===================================================== */
+    --font-thin: 100;
+    --font-light: 300;
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
+    
+    /* =====================================================
+       TYPOGRAPHY - LINE HEIGHTS
+       ===================================================== */
+    --leading-none: 1;
+    --leading-tight: 1.25;
+    --leading-snug: 1.375;
+    --leading-normal: 1.6;
+    --leading-relaxed: 1.75;
+    --leading-loose: 2;
+    
+    /* =====================================================
+       TYPOGRAPHY - LETTER SPACING
+       ===================================================== */
+    --tracking-tighter: -0.05em;
+    --tracking-tight: -0.025em;
+    --tracking-normal: 0;
+    --tracking-wide: 0.025em;
+    --tracking-wider: 0.05em;
+    --tracking-widest: 0.1em;
+    --tracking-luxury: 0.15em;
+    
+    /* =====================================================
+       SPACING SYSTEM
+       ===================================================== */
+    --space-xs: 0.25rem;     /* 4px */
+    --space-sm: 0.5rem;      /* 8px */
+    --space-md: 1rem;        /* 16px */
+    --space-lg: 1.5rem;      /* 24px */
+    --space-xl: 2rem;        /* 32px */
+    --space-2xl: 3rem;       /* 48px */
+    --space-3xl: 4rem;       /* 64px */
+    --space-4xl: 6rem;       /* 96px */
+    --space-5xl: 8rem;       /* 128px */
+    
+    /* =====================================================
+       LAYOUT
+       ===================================================== */
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1280px;
+    --container-2xl: 1440px;
+    --container-padding: var(--space-lg);
+    
+    /* Header */
+    --header-height: 80px;
+    --header-height-scrolled: 70px;
+    
+    /* =====================================================
+       SHADOWS
+       ===================================================== */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.5);
+    --shadow-2xl: 0 25px 50px rgba(0, 0, 0, 0.5);
+    
+    /* Glow Effects */
+    --glow-rose-gold: 0 0 20px rgba(183, 110, 121, 0.3);
+    --glow-rose-gold-strong: 0 0 40px rgba(183, 110, 121, 0.5);
+    --text-glow: 0 2px 10px rgba(183, 110, 121, 0.3);
+    
+    /* =====================================================
+       BORDER RADIUS
+       ===================================================== */
+    --radius-none: 0;
+    --radius-sm: 0.125rem;   /* 2px */
+    --radius-md: 0.25rem;    /* 4px */
+    --radius-lg: 0.5rem;     /* 8px */
+    --radius-xl: 1rem;       /* 16px */
+    --radius-2xl: 1.5rem;    /* 24px */
+    --radius-full: 9999px;
+    
+    /* =====================================================
+       TRANSITIONS & ANIMATIONS
+       ===================================================== */
+    --transition-fast: 150ms ease;
+    --transition-base: 300ms ease;
+    --transition-slow: 500ms ease;
+    --transition-slower: 700ms ease;
+    
+    /* Cubic Bezier for Luxury Feel */
+    --ease-luxury: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    /* =====================================================
+       Z-INDEX SCALE
+       ===================================================== */
+    --z-negative: -1;
+    --z-base: 0;
+    --z-raised: 10;
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-fixed: 300;
+    --z-overlay: 400;
+    --z-modal: 500;
+    --z-popover: 600;
+    --z-toast: 700;
+    --z-loading: 9999;
+    
+    /* =====================================================
+       OPACITY
+       ===================================================== */
+    --opacity-0: 0;
+    --opacity-25: 0.25;
+    --opacity-50: 0.5;
+    --opacity-75: 0.75;
+    --opacity-100: 1;
+}
+
+/* =====================================================
+   DARK MODE ADJUSTMENTS (if needed)
+   ===================================================== */
+@media (prefers-color-scheme: light) {
+    :root {
+        /* This site is always dark, but we can override if needed */
+    }
+}
+
+/* =====================================================
+   LOGO STYLE HELPER CLASS
+   ===================================================== */
+.logo {
+    font-family: var(--font-logo);
+    font-size: var(--logo-size-md);
+    font-weight: 400;
+    color: var(--text-primary);
+    letter-spacing: 0.05em;
+    text-shadow: var(--text-glow);
+}
+
+.logo--sm { font-size: var(--logo-size-sm); }
+.logo--md { font-size: var(--logo-size-md); }
+.logo--lg { font-size: var(--logo-size-lg); }
+.logo--xl { font-size: var(--logo-size-xl); }
+.logo--hero { font-size: var(--logo-size-hero); }

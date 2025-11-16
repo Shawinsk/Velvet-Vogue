@@ -1,0 +1,232 @@
+/**
+ * VelvetVogue - About Us Page Styles
+ */
+
+/* Page Header */
+.page-header {
+    position: relative;
+    height: 400px;
+    background: linear-gradient(135deg, #1A1A1A 0%, #0A0A0A 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: var(--header-height);
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, rgba(183, 110, 121, 0.15) 0%, transparent 70%);
+}
+
+.page-header__content {
+    position: relative;
+    z-index: 2;
+}
+
+.page-header__title {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+}
+
+.page-header__subtitle {
+    font-family: var(--font-logo);
+    font-size: var(--text-xl);
+    color: var(--accent-rose-gold);
+}
+
+/* About Content */
+.about {
+    background: var(--primary-bg);
+    padding: var(--space-4xl) 0;
+}
+
+.about__container {
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    padding: 0 var(--space-xl);
+}
+
+.about__section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+    margin-bottom: var(--space-4xl);
+}
+
+.about__heading {
+    font-family: var(--font-heading);
+    font-size: var(--text-3xl);
+    color: var(--text-primary);
+    margin-bottom: var(--space-xl);
+}
+
+.about__heading--center {
+    text-align: center;
+}
+
+.about__text {
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-lg);
+}
+
+.about__image {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.about__img {
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(135deg, #2A2A2A, #1A1A1A);
+}
+
+/* Values */
+.about__values {
+    margin-bottom: var(--space-4xl);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+    margin-top: var(--space-2xl);
+}
+
+.value-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+.value-card:hover {
+    border-color: var(--accent-rose-gold);
+    transform: translateY(-5px);
+}
+
+.value-card__icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-md);
+}
+
+.value-card__title {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.value-card__text {
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    line-height: var(--leading-relaxed);
+}
+
+/* Team */
+.about__team {
+    margin-bottom: var(--space-4xl);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
+}
+
+.team-card {
+    text-align: center;
+}
+
+.team-card__image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto var(--space-lg);
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--border-color);
+    transition: border-color var(--transition-base);
+}
+
+.team-card:hover .team-card__image {
+    border-color: var(--accent-rose-gold);
+}
+
+.team-card__img {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #2A2A2A, #1A1A1A);
+}
+
+.team-card__name {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    color: var(--text-primary);
+    margin-bottom: var(--space-xs);
+}
+
+.team-card__role {
+    font-size: var(--text-sm);
+    color: var(--accent-rose-gold);
+}
+
+/* CTA */
+.about__cta {
+    text-align: center;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-3xl);
+}
+
+.about__cta-title {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+}
+
+.about__cta-text {
+    color: var(--text-muted);
+    margin-bottom: var(--space-xl);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .values-grid, .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about__section {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-header__title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .values-grid, .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about__container {
+        padding: 0 var(--space-md);
+    }
+}

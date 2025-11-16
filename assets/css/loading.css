@@ -1,0 +1,363 @@
+/**
+ * VelvetVogue - Loading Screen Styles
+ * Sophisticated loading experience with script logo animation
+ * Premium brand identity establishment
+ */
+
+/* =====================================================
+   LOADING SCREEN CONTAINER
+   ===================================================== */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: var(--z-loading);
+    overflow: hidden;
+}
+
+/* Subtle Batik Pattern Background */
+.loading-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(183, 110, 121, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(183, 110, 121, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(183, 110, 121, 0.02) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Animated Background Particles */
+.loading-screen::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 100px 50px, rgba(183, 110, 121, 0.2), transparent),
+        radial-gradient(2px 2px at 400px 150px, rgba(183, 110, 121, 0.15), transparent),
+        radial-gradient(1px 1px at 200px 250px, rgba(183, 110, 121, 0.1), transparent),
+        radial-gradient(2px 2px at 600px 100px, rgba(183, 110, 121, 0.2), transparent),
+        radial-gradient(1px 1px at 800px 200px, rgba(183, 110, 121, 0.15), transparent);
+    animation: floatingParticles 20s linear infinite;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+@keyframes floatingParticles {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100px);
+    }
+}
+
+/* =====================================================
+   LOADING CONTENT WRAPPER
+   ===================================================== */
+.loading-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: var(--space-xl);
+}
+
+/* =====================================================
+   SCRIPT LOGO ANIMATION
+   ===================================================== */
+.loading-logo {
+    font-family: var(--font-logo);
+    font-size: var(--logo-size-hero);
+    font-weight: 400;
+    color: var(--accent-rose-gold);
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-lg);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: logoFadeIn 1.5s var(--ease-luxury) forwards;
+    animation-delay: 0.3s;
+    text-shadow: 
+        0 2px 10px rgba(183, 110, 121, 0.3),
+        0 0 40px rgba(183, 110, 121, 0.2);
+    position: relative;
+}
+
+/* Logo Glow Effect */
+.loading-logo::after {
+    content: 'VelvetVogue';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    filter: blur(30px);
+    opacity: 0;
+    animation: logoGlow 1.5s var(--ease-luxury) forwards;
+    animation-delay: 1s;
+}
+
+@keyframes logoFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    50% {
+        opacity: 0.7;
+        transform: translateY(10px) scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes logoGlow {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+/* =====================================================
+   TAGLINE ANIMATION
+   ===================================================== */
+.loading-tagline {
+    font-family: var(--font-tagline);
+    font-size: var(--text-xl);
+    font-weight: 300;
+    color: var(--text-secondary);
+    letter-spacing: var(--tracking-wider);
+    margin-bottom: var(--space-3xl);
+    opacity: 0;
+    transform: translateY(15px);
+    animation: taglineFadeIn 0.8s var(--ease-luxury) forwards;
+    animation-delay: 1.3s;
+}
+
+@keyframes taglineFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================================================
+   PROGRESS BAR
+   ===================================================== */
+.loading-progress-container {
+    width: 300px;
+    max-width: 80vw;
+    opacity: 0;
+    animation: progressFadeIn 0.5s var(--ease-luxury) forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes progressFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.loading-progress-bar {
+    width: 100%;
+    height: 2px;
+    background: var(--border-color);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    position: relative;
+}
+
+.loading-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(
+        90deg,
+        var(--accent-rose-gold-dark),
+        var(--accent-rose-gold),
+        var(--accent-rose-gold-light)
+    );
+    border-radius: var(--radius-full);
+    transition: width 0.1s linear;
+    position: relative;
+}
+
+/* Shimmer Effect on Progress */
+.loading-progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Progress Percentage Text */
+.loading-progress-text {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+    margin-top: var(--space-md);
+    letter-spacing: var(--tracking-wider);
+    opacity: 0;
+    animation: progressFadeIn 0.5s var(--ease-luxury) forwards;
+    animation-delay: 1.5s;
+}
+
+/* =====================================================
+   LOADING COMPLETE STATE
+   ===================================================== */
+.loading-screen.fade-out {
+    animation: screenFadeOut 0.8s var(--ease-luxury) forwards;
+}
+
+@keyframes screenFadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* =====================================================
+   SRI LANKAN PRIDE BADGE
+   ===================================================== */
+.loading-badge {
+    position: absolute;
+    bottom: var(--space-2xl);
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    letter-spacing: var(--tracking-widest);
+    text-transform: uppercase;
+    opacity: 0;
+    animation: badgeFadeIn 0.6s var(--ease-luxury) forwards;
+    animation-delay: 2s;
+}
+
+.loading-badge::before {
+    content: '🇱🇰';
+    margin-right: var(--space-sm);
+    font-size: var(--text-sm);
+}
+
+@keyframes badgeFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+    100% {
+        opacity: 0.7;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* =====================================================
+   RESPONSIVE ADJUSTMENTS
+   ===================================================== */
+@media (max-width: 768px) {
+    .loading-logo {
+        font-size: 4rem;
+    }
+    
+    .loading-tagline {
+        font-size: var(--text-lg);
+        padding: 0 var(--space-md);
+    }
+    
+    .loading-progress-container {
+        width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .loading-logo {
+        font-size: 3rem;
+    }
+    
+    .loading-tagline {
+        font-size: var(--text-base);
+    }
+    
+    .loading-progress-container {
+        width: 200px;
+    }
+}
+
+/* =====================================================
+   REDUCED MOTION SUPPORT
+   ===================================================== */
+@media (prefers-reduced-motion: reduce) {
+    .loading-logo,
+    .loading-tagline,
+    .loading-progress-container,
+    .loading-badge {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+    
+    .loading-logo::after {
+        animation: none;
+    }
+    
+    .loading-progress-fill::after {
+        animation: none;
+    }
+    
+    .loading-screen::after {
+        animation: none;
+    }
+    
+    .loading-screen.fade-out {
+        opacity: 0;
+        visibility: hidden;
+        transition: none;
+    }
+}
